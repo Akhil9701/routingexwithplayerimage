@@ -1,0 +1,42 @@
+<body>
+<h4>Add Player...</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+                <form #playerForm="ngForm" (submit)="SavePlayer(playerForm)">
+                        <div class="form-group">
+                            Player Id : <input type="text" [(ngModel)]="player.id" name="id" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            Player Name : <input type="text" [(ngModel)]="player.name" name="name" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Player Image : 
+                            <img [src]="url" width="150px" height="150px"  />
+                            <input type="file" (change)="fileSelect($event)" />
+
+                        </div>
+                        <div class="form-group">
+                            Player Country : <input type="text" [(ngModel)]="player.country" name="country" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Player TotRuns : <input type="text" [(ngModel)]="player.totruns" name="totruns" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Player TotWick : <input type="text" [(ngModel)]="player.totwickets" name="totwickets" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" type="submit" value="Save Player" />
+                        </div>
+                    
+                    <br/>
+                    <br/>
+                    
+                    
+                    
+                    
+                    </form>
+        </div>
+    </div>
+</div>
+</body>

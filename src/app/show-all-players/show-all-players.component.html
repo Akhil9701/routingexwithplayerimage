@@ -1,0 +1,21 @@
+<body>
+<h4>Player List</h4>
+<div class="container">
+<div class="card-columns">
+    <div *ngFor="let p of players">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" [src]="p.image" height="250px" width="300px" alt="Card image" style="width:100%"/>
+            <div class="card-body" style="background-color:palegreen">
+              <h4 class="card-title">{{p.name}}</h4>
+              <p class="card-text">{{p.country}}</p>
+              <button class="btn btn-primary" (click)="btnEditClick(p.id)">Edit</button> 
+              <button class="btn btn-danger" style="margin-left:120px;" (click)="btnDelClick(p.id)">Delete</button>
+            </div>
+          </div>
+        
+    </div>
+    
+</div>
+
+</div>
+</body>
